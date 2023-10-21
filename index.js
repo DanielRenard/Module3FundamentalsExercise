@@ -1,4 +1,5 @@
-//1. What are the results of these expressions? (answer first, then use console.log() to check)
+//1. What are the results of these expressions? (answer first, then use console.log()
+// to check)
 
 // console.log("" + 1 + 0) //10
 // console.log("" - 1 + 0) //-1
@@ -18,7 +19,8 @@
 // console.log(undefined === null) //false
 // console.log(" \t \n" - 2) //-2
 
-//2. Which of the below are not giving the right answer? Why are they not correct? How can we fix them?
+//2. Which of the below are not giving the right answer? Why are they not correct? 
+//How can we fix them?
 
 // let three = "3"
 // let four = "4"
@@ -66,13 +68,38 @@
 //4. Rewrite this if using the ternary/conditional operator '?'. 
 //Test it with different values for a and b. What does the ‘+=’ do?
 
-let a = 2, b = 3;
-let result = `${a} + ${b} is `;
+// let a = 2, b = 3;
+// let result = `${a} + ${b} is `;
 
-if (a + b < 10) {
-    result += 'less than 10';
-} else {
-    result += 'greater than 10';
-}
+// if (a + b < 10) {
+//     result += 'less than 10';
+// } else {
+//     result += 'greater than 10';
+// }
 
-console.log(result)
+// console.log(result) //2 + 3 is less than 10
+
+// let a = 9, b = 5;
+// let result = `${a} + ${b} is `;
+
+// console.log(a+b<10 ? result += 'less than 10': result += 'greater than 10') //9 + 5 is greater than 10
+
+//The addition assignment (+=) operator performs addition (which is either numeric addition
+// or string concatenation) on the two operands and assigns the result to the left operand.
+
+//5. Rewrite the following function using: a) function expression syntax, and b) arrow function
+//syntax. Test each version to make sure they work the same.
+
+// function getGreeting(name) {
+//     if (name) {
+//     return 'Hello' + name +  '!';
+//     }
+// }
+
+// console.log( getGreeting ("John") )
+
+// const getGreeting = function (name) {
+//     console.log("John")
+// }
+
+// const name = () => console.log()
