@@ -102,6 +102,114 @@
 
 // console.log( getGreeting (" John") )
 
-const getGreeting = (name) => {return 'Hello' + name + '!'}
+// const getGreeting = (name) => {return 'Hello' + name + '!'}
 
-console.log( getGreeting (" John") )
+// console.log( getGreeting (" John") )
+
+//6. 
+
+// // a)Complete the inigo object by adding a lastName property 
+//and including it in the greeting.
+
+// const westley = {
+//     name: 'Westley',
+//     numFingers: 5
+// }
+// const rugen = {
+//     name: 'Count Rugen',
+//     numFingers: 6
+// }
+// const inigo = {
+//     firstName: 'Inigo',
+//     lastName: 'Montoya',
+//     greeting(person) {
+//         let greeting = `Hello ${person.name}, my name is ${this.firstName} ${this.lastName}.`;
+//         console.log(greeting + this.getCatchPhrase(person));
+//     },
+//     getCatchPhrase(person) {
+//         return ' Nice to meet you.';
+//     }
+// }
+
+// inigo.greeting(westley)
+// inigo.greeting(rugen)
+
+// //b) Complete getCatchPhrase so that if the person argument has 
+//6 fingers, it instead prints his famous catch phrase to the console. 
+//HINT: see https://www.imdb.com/title/tt0093779/characters/nm0001597.
+
+// const westley = {
+//     name: 'Westley',
+//     numFingers: 5
+// }
+// const rugen = {
+//     name: 'Count Rugen',
+//     numFingers: 6
+// }
+// const inigo = {
+//     firstName: 'Inigo',
+//     lastName: 'Montoya',
+//     greeting(person) {
+//         let greeting = `Hello ${person.name}, my name is ${this.firstName} ${this.lastName}.`;
+//         console.log(greeting + this.getCatchPhrase(person));
+//     },
+//     getCatchPhrase(person) {
+//         if (person.numFingers >= 6) {
+//             return ' You killed my father. Prepare to die.';
+//         } else {
+//         return ' Nice to meet you.';
+//             }
+//     }
+// }
+
+// inigo.greeting(westley)
+// inigo.greeting(rugen)
+
+// //c) Update getCatchPhrase to use arrow function syntax and a conditional operator.
+// const westley = {
+//     name: 'Westley',
+//     numFingers: 5
+// }
+// const rugen = {
+//     name: 'Count Rugen',
+//     numFingers: 6
+// }
+// const inigo = {
+//     firstName: 'Inigo',
+//     lastName: 'Montoya',
+//     greeting(person) {
+//         let greeting = `Hello ${person.name}, my name is ${this.firstName} ${this.lastName}.`;
+//         console.log(greeting + this.getCatchPhrase(person));
+//     },
+//     getCatchPhrase: (person) => (person.numFingers >= 6 ) ? ' You killed my father. Prepare to die.' : ' Nice to meet you.',
+// }
+
+// inigo.greeting(westley)
+// inigo.greeting(rugen)
+
+// 7)The following object represents a basketball game and keeps track of the score as the game progresses.
+// a) Modify each of the methods so that they can be ‘chained’ together and the last line of the example code works
+
+const basketballGame = {
+    score: 9,
+    freeThrow() {
+        this.score++;
+    },
+    basket() {
+        this.score += 2;
+    },
+    threePointer() {
+        this.score += 3;
+    },
+    halfTime() {
+        console.log('Halftime score is ' +this.score);
+    }
+}
+
+//modify each of the above object methods to enable function chaining as below:
+
+    // basketballGame.basket().freeThrow().freeThrow().basket().threePointer().halfTime();
+
+// // b) Add a new method to print the full time final score
+// // c) Add a new object property to keep track of the number of fouls and a method to increment it, similar but separate to the score. Include the foul count in the half time and full time console messages
+// // d) Test your object by chaining all the method calls together in different combinations.
