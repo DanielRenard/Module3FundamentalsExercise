@@ -91,15 +91,17 @@
 //syntax. Test each version to make sure they work the same.
 
 // function getGreeting(name) {
-//     if (name) {
 //     return 'Hello' + name +  '!';
 //     }
-// }
 
-// console.log( getGreeting ("John") )
+// console.log( getGreeting (" John") )
 
 // const getGreeting = function (name) {
-//     console.log("John")
+//     return 'Hello' + name + '!';
 // }
 
-// const name = () => console.log()
+// console.log( getGreeting (" John") )
+
+const getGreeting = (name) => {return 'Hello' + name + '!'}
+
+console.log( getGreeting (" John") )
