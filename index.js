@@ -187,29 +187,287 @@
 // inigo.greeting(westley)
 // inigo.greeting(rugen)
 
-// 7)The following object represents a basketball game and keeps track of the score as the game progresses.
-// a) Modify each of the methods so that they can be ‘chained’ together and the last line of the example code works
+// //7)The following object represents a basketball game and keeps track of the score as the game progresses.
+// //a) Modify each of the methods so that they can be ‘chained’ together and the last line of the example code works
 
-const basketballGame = {
-    score: 9,
-    freeThrow() {
-        this.score++;
-    },
-    basket() {
-        this.score += 2;
-    },
-    threePointer() {
-        this.score += 3;
-    },
-    halfTime() {
-        console.log('Halftime score is ' +this.score);
-    }
-}
+// const basketballGame = {
+//     score: 9,
+//     freeThrow() {
+//         this.score ++;
+//         return this;
+//     },
+//     basket() {
+//         this.score += 2;
+//         return this;
+//     },
+//     threePointer() {
+//         this.score += 3;
+//         return this;
+//     },
+//     halfTime() {
+//         console.log('Halftime score is ' +this.score);
+//     }
+// }
 
-//modify each of the above object methods to enable function chaining as below:
+// //modify each of the above object methods to enable function chaining as below:
 
-    // basketballGame.basket().freeThrow().freeThrow().basket().threePointer().halfTime();
+//     basketballGame
+//     .basket()
+//     .freeThrow()
+//     .freeThrow()
+//     .basket()
+//     .threePointer()
+//     .halfTime();
 
 // // b) Add a new method to print the full time final score
-// // c) Add a new object property to keep track of the number of fouls and a method to increment it, similar but separate to the score. Include the foul count in the half time and full time console messages
+
+// const basketballGame = {
+//     score: 12,
+//     freeThrow() {
+//         this.score ++;
+//         return this;
+//     },
+//     basket() {
+//         this.score += 2;
+//         return this;
+//     },
+//     threePointer() {
+//         this.score += 3;
+//         return this;
+//     },
+//     halfTime() {
+//         console.log('Halftime score is ' +this.score);
+//         return this;
+//     },
+//     finalTime() {
+//         console.log('Final score is ' +this.score);
+//     }
+// }
+
+    // basketballGame
+    // .basket()
+    // .freeThrow()
+    // .freeThrow()
+    // .basket()
+    // .threePointer()
+    // .halfTime()
+    // .finalTime();
+
+// // c) Add a new object property to keep track of the number of fouls and a method to increment it, 
+//similar but separate to the score. Include the foul count in the half time and full time console messages
+
+// const basketballGame = {
+//     score: 87,
+//     fouls: 7,
+//     freeThrow() {
+//         this.score ++;
+//         return this;
+//     },
+//     numFouls() {
+//         this.fouls++;
+//         return this;
+//     },
+//     basket() {
+//         this.score += 2;
+//         return this;
+//     },
+//     threePointer() {
+//         this.score += 3;
+//         return this;
+//     },
+//     halfTime() {
+//         console.log('Halftime score is ' + this.score +  ' number of fouls ' + this.fouls);
+//         return this;
+//     },
+//     finalTime() {
+//         console.log('Final score is ' + this.score);
+//     }
+// }
+
+//     basketballGame
+//     .basket()
+//     .freeThrow()
+//     .freeThrow()
+//     .basket()
+//     .threePointer()
+//     .halfTime()
+//     .numFouls()
+//     .finalTime();
+
 // // d) Test your object by chaining all the method calls together in different combinations.
+
+// const basketballGame = {
+//     score: 87,
+//     fouls: 7,
+//     freeThrow() {
+//         this.score ++;
+//         return this;
+//     },
+//     numFouls() {
+//         this.fouls++;
+//         return this;
+//     },
+//     basket() {
+//         this.score += 2;
+//         return this;
+//     },
+//     threePointer() {
+//         this.score += 3;
+//         return this;
+//     },
+//     halfTime() {
+//         console.log('Halftime score is ' + this.score +  ' number of fouls ' + this.fouls);
+//         return this;
+//     },
+//     finalTime() {
+//         console.log('Final score is ' + this.score +  ' number of fouls ' + this.fouls);
+//     }
+// }
+
+//     basketballGame
+//     .basket()
+//     .freeThrow()
+//     .freeThrow()
+//     .basket()
+//     .threePointer()
+//     .halfTime()
+//     .numFouls()
+//     .finalTime()
+
+// //8. The object below represents a single city.
+
+// const sydney = {
+//     name: 'Sydney',
+//     population: 5_121_000,
+//     state: 'NSW',
+//     founded: '26 January 1788',
+//     timezone: 'Australia/Sydney'
+//     }
+
+// //a) Write a function that takes an object as an argument and uses a for...in loop to access
+// //and print to the console each of those object properties and their values. Test it using
+// //the sydney object below.
+
+// let txt = "";
+// for (let x in sydney) {
+//     txt += sydney[x] + " ";
+// }
+// console.log(txt)
+
+// //b) Create a new object for a different city with different properties and call your function
+// //again with the new object.
+
+// const lafayette = {
+//     name: 'Lafayette',
+//     population: 121_374,
+//     state: 'Louisina',
+//     founded: '1821',
+//     timezone: "CST"
+//     }
+
+// let txt = "";
+// for (let x in lafayette) {
+//     txt += lafayette[x] + " ";
+// }
+
+// console.log(txt)
+
+//9. Use the following variables to understand how JavaScript stores objects by reference.
+//a) Create a new moreSports variable equal to teamSports and add some new sport
+//values to it (using push and unshift)
+
+let teamSports = ['Hockey', 'Cricket', 'Volleyball'];
+let dog1 = 'Bingo';
+let cat1 = { name: 'Fluffy', breed: 'Siberian' };
+// let moreSports = teamSports
+// moreSports.push('Basketball', 'Baseball')
+// moreSports.unshift('Handball', 'Football')
+
+// console.log(moreSports) //returns 
+// //[
+// //     'Handball',
+// //     'Football',
+// //     'Hockey',
+// //     'Cricket',
+// //     'Volleyball',
+// //     'Basketball',
+// //     'Baseball'
+// //   ]
+
+// //b) Create a new dog2 variable equal to dog1 and give it a new value
+
+let dog2 = dog1
+dog2 = "Spot"
+
+// console.log(dog2) //returns Spot
+// console.log(dog1) //Returns Bingo
+
+// //c) Create a new cat2 variable equal to cat1 and change its name property
+
+// let cat2 = cat1
+// cat2.name = "Bob"
+
+// console.log(cat2) //returns { breed: 'Siberian', name: 'Bob' }
+
+// //d) Print the original teamSports, dog1 and cat1 variables to the console. Have they
+// //changed? Why?
+
+// console.log(teamSports) //returns 
+// [
+//     'Handball',
+//     'Football',
+//     'Hockey',
+//     'Cricket',
+//     'Volleyball',
+//     'Basketball',
+//     'Baseball'
+//   ]
+
+// console.log(dog1) //returns Bingo
+// console.log(cat1) //returns { breed: 'Siberian', name: 'Bob' }
+
+// //Objects are stored and copied by reference, whereas primitive values: strings, numbers,
+// //booleans, etc., are always copied as a whole value. A variable assigned to an object
+// //stores not the object itself, but its address in memory, in other words a reference to it.
+
+// //I think teamSports and cat1, both objects, changed because they are objects that equal new 
+// //ojects which have augmented their references. dog2, a variable, was made to 
+// //equal dog1, another variable, then was given its own value immediately after. dog1's value was 
+// //was never changed. dog1 and dog2 are string primitives.
+
+// //e) Change the way the moreSports and cat2 variables are created to ensure the
+// //originals remain independent
+
+let moreSports = [...teamSports, 'Baseball', 'Basketball', 'Handball', 'Football'];
+let cat2 = {...cat1, name: 'Bob' }
+
+console.log(moreSports) //returns:
+// [
+//    'Hockey',
+//     'Cricket',
+//     'Volleyball',
+//     'Baseball',
+//     'Basketball',
+//     'Handball',
+//     'Football'
+//   ]
+console.log(cat2) //returns: { name: 'Bob', breed: 'Siberian' }
+
+console.log(cat1)
+console.log(teamSports)
+
+//10. The following constructor function creates a new Person object with the given name and
+//age values.
+//a) Create a new person using the constructor function and store it in a variable
+// function Person(name, age) {
+//     this.name = name;
+//     this.age = age;
+//     this.human = true;
+//     }
+//b) Create a second person using different name and age values and store it in a separate
+//variable
+//c) Print out the properties of each person object to the console
+//d) Rewrite the constructor function as a class called PersonClass and use it to create a
+//third person using different name and age values. Print it to the console as well.
+//e) Add a canDrive method to both the constructor function and the class that returns true
+//if the person is old enough to drive.
