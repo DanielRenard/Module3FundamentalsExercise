@@ -376,9 +376,9 @@
 //a) Create a new moreSports variable equal to teamSports and add some new sport
 //values to it (using push and unshift)
 
-let teamSports = ['Hockey', 'Cricket', 'Volleyball'];
-let dog1 = 'Bingo';
-let cat1 = { name: 'Fluffy', breed: 'Siberian' };
+// let teamSports = ['Hockey', 'Cricket', 'Volleyball'];
+// let dog1 = 'Bingo';
+// let cat1 = { name: 'Fluffy', breed: 'Siberian' };
 // let moreSports = teamSports
 // moreSports.push('Basketball', 'Baseball')
 // moreSports.unshift('Handball', 'Football')
@@ -396,8 +396,8 @@ let cat1 = { name: 'Fluffy', breed: 'Siberian' };
 
 // //b) Create a new dog2 variable equal to dog1 and give it a new value
 
-let dog2 = dog1
-dog2 = "Spot"
+// let dog2 = dog1
+// dog2 = "Spot"
 
 // console.log(dog2) //returns Spot
 // console.log(dog1) //Returns Bingo
@@ -438,23 +438,25 @@ dog2 = "Spot"
 // //e) Change the way the moreSports and cat2 variables are created to ensure the
 // //originals remain independent
 
-let moreSports = [...teamSports, 'Baseball', 'Basketball', 'Handball', 'Football'];
-let cat2 = {...cat1, name: 'Bob' }
+// let teamSports = ['Hockey', 'Cricket', 'Volleyball'];
+// let dog1 = 'Bingo';
+// let cat1 = { name: 'Fluffy', breed: 'Siberian' };
+// let moreSports = [...teamSports, 'Baseball', 'Basketball', 'Handball', 'Football'];
+// let cat2 = {...cat1, name: 'Bob' }
 
-console.log(moreSports) //returns:
-// [
-//    'Hockey',
-//     'Cricket',
-//     'Volleyball',
-//     'Baseball',
-//     'Basketball',
-//     'Handball',
-//     'Football'
-//   ]
-console.log(cat2) //returns: { name: 'Bob', breed: 'Siberian' }
-
-console.log(cat1)
-console.log(teamSports)
+// console.log(moreSports) //returns:
+// // [
+// //    'Hockey',
+// //     'Cricket',
+// //     'Volleyball',
+// //     'Baseball',
+// //     'Basketball',
+// //     'Handball',
+// //     'Football'
+// //   ]
+// console.log(teamSports) // returns: [ 'Hockey', 'Cricket', 'Volleyball' ]
+// console.log(cat2) //returns: { name: 'Bob', breed: 'Siberian' }
+// console.log(cat1) //returns: { name: 'Fluffy', breed: 'Siberian' }
 
 //10. The following constructor function creates a new Person object with the given name and
 //age values.
